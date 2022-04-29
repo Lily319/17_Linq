@@ -35,13 +35,13 @@ namespace MyHomeWork
                 comboBox1.Items.Add(y.Key);
             }
         }
-
-        private void bindingSource1_CurrentChanged_All(object sender, EventArgs e)
+        //System.Collections.Generic.List<LinqLabs.NWDataSet.OrdersRow> orders;
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
-            //var q = from od in nwDataSet2.Order_Details
-            //        where od.OrderID == nwDataSet1.Orders[bindingSource1.Position].OrderID
-            //        select od;
-            //dataGridView2.DataSource = q.ToList();
+            var q = from od in nwDataSet2.Order_Details
+                    where od.OrderID == /*orders*/(int)(dataGridView1.Rows[bindingSource1.Position].Cells["OrderID"].Value)//.OrderID
+                    select od;
+            dataGridView2.DataSource = q.ToList();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -83,23 +83,29 @@ namespace MyHomeWork
 
         private void button6_Click(object sender, EventArgs e)
         {
-            bindingSource1.DataSource = nwDataSet1.Orders;
+            //bindingSource1.DataSource = nwDataSet1.Orders;
+            //dataGridView1.DataSource = bindingSource1;
+            var q = from o in nwDataSet1.Orders
+                    select o;
+            bindingSource1.DataSource = q.ToList();
             dataGridView1.DataSource = bindingSource1;
-            //bindingSource1.CurrentItemChanged += bindingSource1_CurrentChanged_All;
+            //orders = q.ToList();
+            bindingSource1.CurrentItemChanged += bindingSource1_CurrentChanged;
 
-            var q = from od in nwDataSet2.Order_Details
+            var q1 = from od in nwDataSet2.Order_Details
                     where od.OrderID == (int)(dataGridView1.CurrentRow.Cells[0].Value)
                     select od;
-            dataGridView2.DataSource = q.ToList();
+            dataGridView2.DataSource = q1.ToList();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //int i = (int)(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            var q = from od in nwDataSet2.Order_Details
-                    where od.OrderID == (int)(dataGridView1.CurrentRow.Cells[0].Value)
-                    select od;
-            dataGridView2.DataSource = q.ToList();
+
+            //var q = from od in nwDataSet2.Order_Details
+            //        where od.OrderID == (int)(dataGridView1.CurrentRow.Cells[0].Value)
+            //        select od;
+            //dataGridView2.DataSource = q.ToList();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -114,6 +120,8 @@ namespace MyHomeWork
                          select o;
                 bindingSource1.DataSource = q1.ToList();
                 dataGridView1.DataSource = bindingSource1;
+                //orders = q1.ToList();
+                bindingSource1.CurrentItemChanged += bindingSource1_CurrentChanged;
                 var q = from od in nwDataSet2.Order_Details
                         where od.OrderID == (int)(dataGridView1.CurrentRow.Cells[0].Value)
                         select od;
