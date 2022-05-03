@@ -238,7 +238,7 @@ namespace MyHomeWork
             this.label3.Location = new System.Drawing.Point(11, 296);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 22);
+            this.label3.Size = new System.Drawing.Size(163, 15);
             this.label3.TabIndex = 134;
             this.label3.Text = "LINQ to Northwind Entity";
             // 
@@ -259,7 +259,7 @@ namespace MyHomeWork
             this.label4.Location = new System.Drawing.Point(4, 22);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 22);
+            this.label4.Size = new System.Drawing.Size(106, 15);
             this.label4.TabIndex = 126;
             this.label4.Text = "LINQ - GroupBy";
             // 
@@ -274,6 +274,7 @@ namespace MyHomeWork
             this.button4.TabIndex = 85;
             this.button4.Text = "int[]  分三群 - No LINQ";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button9
             // 
@@ -314,7 +315,7 @@ namespace MyHomeWork
             this.label1.Location = new System.Drawing.Point(10, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 22);
+            this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 128;
             this.label1.Text = "LINQ to FileInfo[]";
             // 
@@ -329,6 +330,7 @@ namespace MyHomeWork
             this.button6.TabIndex = 93;
             this.button6.Text = "  依 年 分組檔案 (大=>小)";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
             // 
@@ -353,6 +355,7 @@ namespace MyHomeWork
             this.button38.TabIndex = 95;
             this.button38.Text = "依 檔案大小 分組檔案 (大=>小)";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button1
             // 
@@ -378,11 +381,11 @@ namespace MyHomeWork
             // 
             // Frm作業_3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1610, 794);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm作業_3";
             this.Text = "Frm_作業3";
