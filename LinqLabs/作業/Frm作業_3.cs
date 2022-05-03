@@ -23,16 +23,22 @@ namespace MyHomeWork
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             treeView1.Nodes.Clear();
             TreeNode node = null;
+            int count = 0;
             foreach(int n in nums)
             {
                 if (treeView1.Nodes[MyNumsKey(n)] == null)
                 {
+                    count = 0;
                     node = treeView1.Nodes.Add(MyNumsKey(n), MyNumsKey(n));
                     node.Nodes.Add(n.ToString());
+                    count++;
+                    node.Text = $"{MyNumsKey(n)}({count})";
                 }
                 else
                 {
                     node.Nodes.Add(n.ToString());
+                    count++;
+                    node.Text = $"{MyNumsKey(n)}({count})";
                 }
             }
             //TreeNode node = treeView1.Nodes.Add("Small");
