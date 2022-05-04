@@ -39,6 +39,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -93,6 +94,9 @@
     <Compile Include="Category.cs">
       <DependentUpon>NWModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,11 +117,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NWModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>NWModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales_by_Year_Result.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="作業\Frm作業_1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -59,6 +59,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -144,6 +145,7 @@
             this.button55.TabIndex = 111;
             this.button55.Text = "Create(Insert)";
             this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
             // button56
             // 
@@ -178,6 +180,7 @@
             this.button14.TabIndex = 119;
             this.button14.Text = "TODO : Orders -  Group by 日期 / 大小";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button19
             // 
@@ -243,17 +246,19 @@
             this.button11.TabIndex = 82;
             this.button11.Text = "3. 尋找各分類之平均單價 (點關連標記法, 導覽屬性) (Implicit Inner Join) ";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(297, 128);
+            this.button2.Location = new System.Drawing.Point(416, 40);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 42);
             this.button2.TabIndex = 93;
             this.button2.Text = "導覽屬性";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button21
             // 
@@ -265,6 +270,7 @@
             this.button21.TabIndex = 92;
             this.button21.Text = "SelectMany - inner join / Cross join";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button20
             // 
@@ -287,6 +293,7 @@
             this.button16.TabIndex = 86;
             this.button16.Text = "點關連標記法 (left out join)";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button22
             // 
@@ -298,6 +305,7 @@
             this.button22.TabIndex = 112;
             this.button22.Text = "orderby , then by";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // groupBox1
             // 
@@ -388,7 +396,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.button21);
             this.groupBox3.Controls.Add(this.button20);
             this.groupBox3.Controls.Add(this.button16);
@@ -491,6 +498,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox5);
@@ -504,6 +513,18 @@
             this.splitContainer1.SplitterDistance = 612;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.Location = new System.Drawing.Point(416, 92);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(122, 42);
+            this.button3.TabIndex = 119;
+            this.button3.Text = "預存程序";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox5
             // 
@@ -598,5 +619,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button3;
     }
 }
